@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>NPNG</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="https://startbootstrap.github.io/startbootstrap-stylish-portfolio/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="https://startbootstrap.github.io/startbootstrap-stylish-portfolio/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://startbootstrap.github.io/startbootstrap-stylish-portfolio/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="https://startbootstrap.github.io/startbootstrap-stylish-portfolio/css/stylish-portfolio.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top">No Pain No Gain</a>
+      </li>
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top">Home</a>
+      </li>
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#about">About</a>
+      </li>
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#portfolio">Blog</a>
+      </li>
+        {% if user.is_anonymous %}
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="/Login">Login</a>
+      </li>
+        {% else %}
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger">Hi {{user}}!!</a>
+      </li>
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="/Logout">Logout</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead d-flex" style="background-image:url(https://images.wallpaperscraft.com/image/fitness_barbell_weight_training_108415_3840x2160.jpg)">
+    <div class="container text-center my-auto">
+      <h1 class="mb-1">Calisthenic for Beginner</h1>
+      <h3 class="mb-5">
+        <em>Get in the best shape of your life</em>
+      </h3>
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+    </div>
+    <div class="overlay"></div>
+  </header>
+
+  <!-- About -->
+  <section class="content-section bg-light" id="about">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>What is a Calisthenic?</h2>
+          <p class="lead mb-5">Calisthenics เป็นการฝึกความแข็งแรงประเภทหนึ่งที่ใช้น้ำหนักของตัวเราเองเป็นแรงต้าน โดยใช้การเคลื่อนไหวที่หลากหลาย เพื่อเพิ่มความยากขึ้นในแต่ละท่า เป้าหมายคือการเพิ่มความแข็งแรง และความยืดหยุ่นให้ร่างกาย ด้วยการเคลื่อนไหวต่างๆ เช่น การดึง การผลัก การงอ การกระโดด หรือการแกว่ง เมื่อฝึกซ้ำหลายๆ ครั้งประโยชน์ที่จะได้รับคือการปรับสภาพกล้ามเนื้อและสมรรถภาพร่างกายในเชิง Aerobic และ Anarobic ขึ้นอยู่กับเป้าหมายของผู้ฝึก ทั้งยังช่วยเรื่องทักษะต่างๆ ในการใช้งานร่างกาย เช่น การทรงตัว ความมั่นคง ความคล่องแคล่ว การประสานงานของส่วนต่างๆ และพละกำลัง</p>
+          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#portfolio">Find Out More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="content-section" id="portfolio">
+    <div class="container">
+      <div class="content-section-heading text-center">
+        <h3 class="text-secondary mb-0">Training</h3>
+        <h2 class="mb-5">Beginner</h2>
+      </div>
+
+      <div class="row no-gutters">
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="/blog01">
+            <div class="caption">
+              <div class="caption-content">
+                <div class="h2">5 Day/Week</div>
+                <p class="mb-0">บทความนี้เหมาะสำหรับผู้เริ่มต้นที่ต้องการฝึก 5 วันต่อสัปดาห์</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="/static/images/beginner1.jpg" alt="">
+          </a>
+        </div>
+
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="/blog02">
+            <div class="caption">
+              <div class="caption-content">
+                <div class="h2">เริ่มเล่น Calisthenics ยังไง ?</div>
+                <p class="mb-0">3 ท่าพื้นฐานที่คุณจะต้องทำได้ </p>
+              </div>
+            </div>
+            <img class="img-fluid" src="/static/images/blog02.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <ul class="list-inline mb-5">
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="https://www.facebook.com/profile.php?id=100002835948161">
+            <i class="icon-social-facebook"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="https://www.instagram.com/palasak_rock/">
+            <i class="icon-social-instagram"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white" href="https://github.com/Palasak/pythonanywhere">
+            <i class="icon-social-github"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="text-muted small mb-0">Copyright &copy; Palasak 2020</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://startbootstrap.github.io/startbootstrap-stylish-portfolio/vendor/jquery/jquery.min.js"></script>
+  <script src="https://startbootstrap.github.io/startbootstrap-stylish-portfolio/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://startbootstrap.github.io/startbootstrap-stylish-portfolio/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="https://startbootstrap.github.io/startbootstrap-stylish-portfolio/js/stylish-portfolio.min.js"></script>
+
+</body>
+
+</html>
